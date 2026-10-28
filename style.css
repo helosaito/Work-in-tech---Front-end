@@ -325,7 +325,7 @@ body.escuro header button{
 }
 
 body.escuro header button:hover{
-    background-color: rgb(243, 46, 46);
+    background-color: blue;
     color: white;
 }
 
