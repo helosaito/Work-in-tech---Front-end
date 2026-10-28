@@ -1,5 +1,4 @@
 /*===GERAL====*/
-
 *{
     font-family: sans-serif;
     text-decoration: none;
@@ -16,7 +15,7 @@ h5{
 }
 
 p{
-    color: rgb(37, 37, 37);
+    color: rgb(19, 18, 18);
 }
 
 p, button{
@@ -28,7 +27,7 @@ p, button{
 }
 
 .sections:nth-child(odd){
-    background-color: red;
+    background-color: blue;
 }
 
 .sections:nth-child(odd) h3{
@@ -52,7 +51,7 @@ header{
 }
 
 #logo span{
-    color: red;
+    color: blue;
 }
 
 nav{
@@ -70,7 +69,7 @@ nav a{
 }
 
 nav a:hover{
-    background-color: red;
+    background-color:blue;
     color: white;
 }
 
@@ -97,7 +96,7 @@ header button img{
 
 header button:hover{
     scale: 1.05;
-    background-color: red;
+    background-color: blue;
 }
 
 header button:active{
@@ -112,7 +111,7 @@ header button:active{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url(amg/background-hardware-313191-dark.png);
+    background-image: url(amg/2184723-tecnologia-com-fundo-azul-escuro-vetor.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     flex-direction: column;
@@ -122,5 +121,226 @@ header button:active{
     width: 250px;
     height: 250px;
     border-radius: 50%;
-    object-fit: ;
+    object-fit: cover;
+}
+
+#hero h1{
+    padding: 40px 0 20px 0;
+    font-weight: bolder;
+}
+
+#hero button{
+    border-radius: 50px;
+    font-size: 20px;
+    padding: 10px 20px;
+    border: 0;
+    background-color: blue;
+    color: white;
+    transition: all 0.2s ease-in;
+}
+
+#hero button:hover{
+    scale: 1.05;
+    background-color: rgb(31, 31, 255);
+}
+
+/*===HABILIDADES===*/
+
+#stacks{
+    display: flex;
+    margin: 30px auto 0;
+    width: 100%;
+    padding: 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#stacks li{
+    list-style: none;
+    width: 150px;
+    height: 120px;
+    padding: 10px;
+    border-radius: 30px;
+    background-color: white;
+    color: black;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+#stacks li:hover{
+    margin-top: -20px;
+    box-shadow: -10px 20px rgba(247, 234, 234, 0.404);
+}
+
+#stacks li img{
+    width: 60px;
+    margin: 10px 0;
+}
+
+/*===PROJETOS===*/
+
+.carrossel{
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    margin-top: 30px;
+    padding-bottom: 20px;
+}
+
+.card{
+    flex: 0 0 280px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+}
+
+.card img{
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+}
+
+.card h5, .card p{
+    padding: 10px 15px;
+}
+
+.setas{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.setas button{
+    width: 45px;
+    height: 45px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background-color: blue;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.setas button:hover{
+    background-color: rgb(3, 3, 102);
+}
+
+.contato{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.contato img{
+    width: 45%;
+    border-radius: 20px;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+}
+
+.formulario label{
+    color: white;
+    font-weight: bold;
+}
+
+.formulario input, .formulario textarea{
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.formulario button{
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 50px;
+    background-color: white;
+    color: rgb(160, 0, 0);
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.resposta{
+    color: white;
+    font-weight: bold;
+}
+
+
+/* ===== RODAPÉ ===== */
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 40px 20px;
+    background-color: #121212;
+}
+
+footer img{
+    width: 150px;
+}
+
+footer p{
+    padding: 0;
+    color: white;
+    font-size: 14px;
+}
+
+
+/* ===== TEMA ESCURO ===== */
+
+body.escuro{
+    background-color: #121212;
+    color: white;
+}
+
+body.escuro header{
+    border-bottom-color: #333;
+}
+
+body.escuro #logo,
+body.escuro nav a,
+body.escuro p{
+    color: white;
+}
+
+body.escuro header button{
+    background-color: white;
+    color: black;
+}
+
+body.escuro header button:hover{
+    background-color: rgb(243, 46, 46);
+    color: white;
+}
+
+body.escuro header button img{
+    filter: none;
+}
+
+body.escuro header button:hover img{
+    filter: invert(1);
+}
+
+body.escuro #hero{
+    background-image: url(./img/BackgroundDark.png);
+}
+
+body.escuro .card{
+    background-color: #1e1e1e;
 }
