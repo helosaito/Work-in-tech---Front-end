@@ -526,11 +526,19 @@ body.escuro .conteudo-experiencia:hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
 }
 
-/* ===== RESPONSIVIDADE PARA CELULARES ===== */
+
+/* ===== RESPONSIVIDADE ===== */
+
+* {
+    box-sizing: border-box;
+}
 
 @media (max-width: 768px) {
 
-    /* Cabeçalho */
+    body {
+        overflow-x: hidden;
+    }
+
     header {
         flex-direction: column;
         gap: 15px;
@@ -538,35 +546,79 @@ body.escuro .conteudo-experiencia:hover {
     }
 
     nav {
-        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    nav a {
+        font-size: 13px;
+        padding: 8px;
+    }
+
+    header button {
+        margin-top: 5px;
+    }
+
+    .sections {
+        padding: 35px 20px;
+        width: 100%;
+    }
+
+    #hero {
+        min-height: 80vh;
+        padding: 30px 20px;
+        text-align: center;
+    }
+
+    #hero img {
+        width: 180px;
+        height: 180px;
+    }
+
+    #hero h1 {
+        font-size: 28px;
+        padding: 25px 0 15px;
+    }
+
+    #hero h2 {
+        font-size: 18px;
+    }
+
+    #hero p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    #stacks {
         flex-wrap: wrap;
         justify-content: center;
         gap: 15px;
     }
 
-    /* Seções */
-    .sections {
-        padding: 30px 20px;
+    #stacks li {
+        width: calc(50% - 10px);
+        height: auto;
+        min-height: 120px;
+        padding: 10px;
     }
 
-    /* Imagem principal */
-    .imagem-perfil {
-        width: 180px;
-        height: 180px;
+    #stacks li img {
+        max-width: 50px;
     }
 
-    /* Habilidades */
-    .habilidades {
-        grid-template-columns: 1fr;
+    .carrossel {
+        width: 100%;
     }
 
-    /* Projetos */
-    .card {
-        min-width: 250px;
+    .card,
+    .card1 {
+        flex: 0 0 240px;
     }
 
-    /* Experiências */
     .linha-tempo {
+        margin-left: 10px;
         padding-left: 20px;
     }
 
@@ -574,14 +626,28 @@ body.escuro .conteudo-experiencia:hover {
         left: -32px;
     }
 
-    /* Certificações */
-    .certificacoes {
-        grid-template-columns: 1fr;
+    .conteudo-experiencia {
+        padding: 15px;
     }
 
-    /* Formulário */
+    .certificacoes {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+    }
+
+    .certificado {
+        padding: 15px;
+        min-width: 0;
+    }
+
+    .contato {
+        flex-direction: column;
+        gap: 20px;
+    }
+
     .formulario {
         width: 100%;
+        min-width: 0;
     }
 
     .formulario input,
@@ -590,27 +656,50 @@ body.escuro .conteudo-experiencia:hover {
     }
 }
 
-/* ===== TELAS MUITO PEQUENAS ===== */
+/* ===== CELULARES PEQUENOS ===== */
 
 @media (max-width: 480px) {
 
-    h1 {
-        font-size: 28px;
+    .sections {
+        padding: 30px 15px;
     }
 
     h3 {
-        font-size: 22px;
+        font-size: 24px;
+    }
+
+    #hero img {
+        width: 150px;
+        height: 150px;
+    }
+
+    #hero h1 {
+        font-size: 24px;
+    }
+
+    #hero h2 {
+        font-size: 16px;
+    }
+
+    #stacks li {
+        width: calc(50% - 10px);
+    }
+
+    .certificacoes {
+        grid-template-columns: 1fr;
+    }
+
+    .card,
+    .card1 {
+        flex: 0 0 220px;
     }
 
     nav {
-        gap: 10px;
+        gap: 3px;
     }
 
     nav a {
-        font-size: 13px;
-    }
-
-    .sections {
-        padding: 25px 15px;
+        font-size: 11px;
+        padding: 6px;
     }
 }
