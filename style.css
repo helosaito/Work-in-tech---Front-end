@@ -525,3 +525,92 @@ body.escuro .linha-tempo {
 body.escuro .conteudo-experiencia:hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
 }
+
+/* ===== RESPONSIVIDADE PARA CELULARES ===== */
+
+@media (max-width: 768px) {
+
+    /* Cabeçalho */
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    /* Seções */
+    .sections {
+        padding: 30px 20px;
+    }
+
+    /* Imagem principal */
+    .imagem-perfil {
+        width: 180px;
+        height: 180px;
+    }
+
+    /* Habilidades */
+    .habilidades {
+        grid-template-columns: 1fr;
+    }
+
+    /* Projetos */
+    .card {
+        min-width: 250px;
+    }
+
+    /* Experiências */
+    .linha-tempo {
+        padding-left: 20px;
+    }
+
+    .marcador {
+        left: -32px;
+    }
+
+    /* Certificações */
+    .certificacoes {
+        grid-template-columns: 1fr;
+    }
+
+    /* Formulário */
+    .formulario {
+        width: 100%;
+    }
+
+    .formulario input,
+    .formulario textarea {
+        width: 100%;
+    }
+}
+
+/* ===== TELAS MUITO PEQUENAS ===== */
+
+@media (max-width: 480px) {
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h3 {
+        font-size: 22px;
+    }
+
+    nav {
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .sections {
+        padding: 25px 15px;
+    }
+}
