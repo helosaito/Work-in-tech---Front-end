@@ -1,4 +1,3 @@
-
 // ===== 1. TEMA CLARO / ESCURO =====
 
 const botaoTema = document.getElementById("botao-tema");
@@ -44,15 +43,29 @@ botaoVoltar.addEventListener("click", function () {
 
 // ===== 3. FORMULÁRIO DE CONTATO =====
 
+emailjs.init({
+    publicKey: "dLyjfBF7hyl_RecA5"
+});
+
 const formulario = document.getElementById("formulario");
 const resposta = document.getElementById("resposta");
 
 formulario.addEventListener("submit", function (evento) {
     evento.preventDefault();
 
-    const nome = document.getElementById("nome").value;
+    resposta.textContent = "Enviando mensagem...";
 
-    resposta.textContent = "Obrigado, " + nome + "! Sua mensagem foi enviada.";
-
-    formulario.reset();
+    emailjs.sendForm(
+        "service_5fevo9i",
+        "template_4guexvb",
+        formulario
+    )
+        .then(function () {
+            resposta.textContent = "Mensagem enviada com sucesso!";
+            formulario.reset();
+        })
+        .catch(function (erro) {
+            resposta.textContent = "Erro ao enviar a mensagem. Tente novamente.";
+            console.log("Erro:", erro);
+        });
 });
